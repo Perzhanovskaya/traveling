@@ -65,6 +65,8 @@ body{
     padding-right: 59px;
     line-height: 24px;
     background: url(../img/icons/arrow.svg) no-repeat 95%;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
 }
 
@@ -78,6 +80,8 @@ body{
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-transition: 2s linear;
+    -o-transition: 2s linear;
     transition: 2s linear;
     padding-bottom: 15px;
     z-index: 999;
@@ -90,16 +94,26 @@ body{
 }
 
 .header__content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-top: 56px;
 }
 
 .header__list{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
 }
 .header__item{
@@ -141,7 +155,9 @@ body{
 
 .burger__line:nth-child(2){
     top:50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
 }
 
 .burger__line:nth-child(3){
@@ -184,9 +200,14 @@ body{
 }
 
 .search-form__info{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     
     
 }
@@ -199,6 +220,30 @@ body{
     background: transparent url(../img/icons/Oval.svg) no-repeat left 6px;
     background-size: 20px;
     border-bottom: 2px solid #BFC0C5;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-form__field::-webkit-input-placeholder{
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-form__field::-moz-placeholder{
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-form__field:-ms-input-placeholder{
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.search-form__field::-ms-input-placeholder{
     color: #FFFFFF;
     font-size: 18px;
     line-height: 24px;
@@ -234,7 +279,8 @@ body{
     max-width: 1262px;
     margin: 0 auto;
     background-color: #FFFFFF;
-    box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+    -webkit-box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+            box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
     position: relative;
      
 }
@@ -247,7 +293,9 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+            transform: translateY(-100%);
     background-color: #FFFFFF;
     width: 100%;
     
@@ -256,13 +304,16 @@ body{
 /*вариант на Grid*/
 
 .benefits__row{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 55px 1fr 55px 1fr;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 55px;
     padding: 0 100px;
 }
 
 .benefits-item{
+    -ms-grid-column-span: 1;
     grid-column: span 1;
     margin-bottom: 112px;
 }
@@ -307,10 +358,17 @@ body{
 }
 
 .inspired__caption{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-bottom: 36px;
     
 }
@@ -319,7 +377,9 @@ body{
 }
 
 .inspired__cards{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
     grid-template-columns: repeat(6, 1fr);
     grid-gap: 10px;
 }
@@ -330,7 +390,9 @@ body{
 }
 
 .inspired-item:hover .inspired-item__pic{
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .inspired-item::after{
@@ -346,26 +408,32 @@ body{
 
 }
 .inspired-item__lg{
+    -ms-grid-column-span: 3;
     grid-column: span 3;
     
 }
 
 .inspired-item__sm{
+    -ms-grid-column-span: 2;
     grid-column: span 2;
     
 }
 
 .inspired-item__pic{
     width: 100%;
+    -webkit-transition: .15s all;
+    -o-transition: .15s all;
     transition: .15s all;
 }
 .inspired-item__pic-lg{
     height: 354px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 .inspired-item__pic-sm{
     height: 283px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
 }
 
 .inspired-item__caption{
@@ -397,11 +465,15 @@ body{
 }
 
 .tours__content{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 108px 1fr;
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 108px;
     margin-bottom: 77px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
 }
 
@@ -434,15 +506,23 @@ body{
 }
 
 .visit__cards{
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 53px 1fr 53px 1fr 53px 1fr 53px 1fr 53px 1fr;
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 53px;
     grid-row-gap: 57px;
 
 }
 .visit__item{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-span: 2;
     grid-column: span 2;
 }
     
@@ -459,11 +539,18 @@ body{
     left: 0px;
     bottom: 0px;
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 15px 25px;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 
 }
 .visit__item-title{
@@ -547,17 +634,25 @@ body{
     padding: 121px 0px ;
 }
 .footer__content{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 
 }
 .footer__logo{
     width: 50%;
 }
 .footer__nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 50%;
     
 }
@@ -598,13 +693,16 @@ body{
         margin-bottom: 50px;
     }
     .benefits__wrap{
-        box-shadow: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
     }
     .benefits__title{
         padding: 50px 30px;
     }
     .benefits__row{
-        column-gap: 15px;
+        -webkit-column-gap: 15px;
+           -moz-column-gap: 15px;
+                column-gap: 15px;
         padding: 0 30px;
     }
     .benefits-item{
@@ -614,9 +712,11 @@ body{
         margin-bottom: 100px;
     }
     .inspired-item__lg{
+        -ms-grid-column-span:6;
         grid-column:span 6;
     }
     .inspired-item__sm{
+        -ms-grid-column-span: 6;
         grid-column: span 6;
         
     }
@@ -639,6 +739,7 @@ body{
 
 
     .visit__item{
+        -ms-grid-column-span: 3;
         grid-column: span 3;
     }
     .visit__cards{
@@ -669,11 +770,17 @@ body{
         background-color: #0E1D28;
         z-index: 20;
         padding: 75px;
-        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+        -webkit-transition: 0.4s all linear;
+        -o-transition: 0.4s all linear;
         transition: 0.4s all linear;
     }
     .header__nav_active{
-        transform:translateX(0);
+        -webkit-transform:translateX(0);
+            -ms-transform:translateX(0);
+                transform:translateX(0);
         
 
     }
@@ -714,10 +821,14 @@ body{
     }
 
     .header__nav-close-line:first-child{
-        transform: translateY(-50%) rotate(45deg);
+        -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
     }
     .header__nav-close-line:last-child{
-        transform: translateY(-50%) rotate(-45deg);
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+            -ms-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
     }
     .intro{
         padding-top:150px;   
@@ -735,6 +846,18 @@ body{
         margin-right: 0;
         background: transparent url(../img/icons/Oval.svg) no-repeat left 3px;
     }
+    .search-form__field::-webkit-input-placeholder{
+        font-size: 16px;
+    }
+    .search-form__field::-moz-placeholder{
+        font-size: 16px;
+    }
+    .search-form__field:-ms-input-placeholder{
+        font-size: 16px;
+    }
+    .search-form__field::-ms-input-placeholder{
+        font-size: 16px;
+    }
     .search-form__field::placeholder{
         font-size: 16px;
     }
@@ -751,6 +874,7 @@ body{
         margin-bottom: 10px;
     }
     .benefits-item{
+        -ms-grid-column-span: 3;
         grid-column: span 3;
         grid-column-gap: 30px;
     }
@@ -784,26 +908,28 @@ body{
         margin-bottom: 50px;
     }
     .tours__pic, .tours__info{
+        -ms-grid-column-span: 2;
         grid-column: span 2;
     } 
     .tours__pic{
         margin-bottom: 20px;
     }
     .tours__pic_mob-first{
-        grid-row-start: -1;
+        -ms-grid-row: -1;
+            grid-row-start: -1;
     }
 
     .visit{
         margin-bottom: 70px;
     }
     .visit__item{
+        -ms-grid-column-span: 6;
         grid-column: span 6;
     }
     .visit__item-desc{
         margin-bottom: 15px;
     }
-    .visit__item-pic{  
-    }
+    
     .visit__item-panel{
         width: 384px;
     
@@ -821,6 +947,8 @@ body{
         margin-bottom: 20px;
     }
     .footer__nav{
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         width: 100%; 
     }
